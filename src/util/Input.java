@@ -1,6 +1,7 @@
 package util;
 
 import java.util.Scanner;
+import java.util.stream.DoubleStream;
 
 public class Input {
 
@@ -47,9 +48,12 @@ public class Input {
        int answer;
 
        do{
-           System.out.println("Enter a number between " + min + " and " + max +": ");
+//           System.out.println("Enter a number between " + min + " and " + max +": ");
+           System.out.println("\nEnter choice: ");
            answer = this.scanner.nextInt();
-
+           if(answer < min || answer > max) {
+               System.out.println("\nInvalid option go again.\n");
+           }
 
        }while (answer < min || answer > max);
        return answer;
@@ -77,8 +81,14 @@ public class Input {
 
         int answer;
         System.out.println(prompt);
-        answer = this.scanner.nextInt();
-        return answer;
+        while (true) {
+            try {
+                answer = this.scanner.nextInt();
+                return answer;
+            } catch (NumberFormatException e) {
+                System.out.println("\nNot a possible option try again.\n");
+            }
+        }
     }
 
     public double getDouble(double min, double max){
