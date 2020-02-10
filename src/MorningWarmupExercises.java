@@ -1,5 +1,4 @@
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 
@@ -24,16 +23,16 @@ public class MorningWarmupExercises {
 //        System.out.print(count);
 
 //        System.out.println(cube(3));
-        ArrayList<String> f = new ArrayList<>();
-        String[] fruits = {"Kiwi","Apple","Grapes","Banana","Guava","Pear"};
+//        ArrayList<String> f = new ArrayList<>();
+//        String[] fruits = {"Kiwi","Apple","Grapes","Banana","Guava","Pear"};
+//
+//
+//        for (String fruit : fruits) {
+//            f.add(fruit);
+//        }
+//        System.out.println(f);
 
-
-        for (String fruit : fruits) {
-            f.add(fruit);
-        }
-        System.out.println(f);
-
-
+        writeLines();
     }
 
 //    public static long cube(int num){
@@ -58,4 +57,14 @@ public class MorningWarmupExercises {
 //
 //        return Integer.toBinaryString(sum);
 //    }
+
+    public static void writeLines(){
+
+        String[] data = {"I like to eat apples.","Hey, how are you?","Whats going on?", "Whats up doc?","I go to codeup at 9 am on weekdays."};
+
+
+        for(String s : data){
+            System.out.println(s);
+        }
+    }
 }
