@@ -7,24 +7,23 @@ public class InputTest {
 
 //        System.out.println("Enter a string: ");
 
-        String name = userInput.getString("Enter a string: ");
-
-        System.out.println("Hello, " + name);
+//        String name = userInput.getString("Enter a string: ");
+//
+//        System.out.println("Hello, " + name);
 
 
 
 //        System.out.println("Would you like to continue? y/n ");
-
-        boolean userChoice = userInput.yesNo("Would you like to continue? y/n ");
-
-        System.out.println(userChoice);
-
-
-        System.out.println(userInput.getInt(1, 100));
-        System.out.println(userInput.getInt("Enter a Integer: "));
+//        boolean userChoice = userInput.yesNo("Would you like to continue? y/n ");
+//
+//        System.out.println(userChoice);
 
 
-        System.out.println(userInput.getDouble(1.0,100.0));
+//        System.out.println(userInput.getInt(1, 100));
+//        System.out.println(userInput.getInt("Enter a Integer: "));
+
+
+//        System.out.println(userInput.getDouble(1.0,100.0));
         System.out.println(userInput.getDouble("Enter a Double: "));
 
     }
