@@ -1,4 +1,5 @@
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 
@@ -32,7 +33,9 @@ public class MorningWarmupExercises {
 //        }
 //        System.out.println(f);
 
-        writeLines();
+//        writeLines();
+
+        System.out.println(divide(5,3));
     }
 
 //    public static long cube(int num){
@@ -58,13 +61,22 @@ public class MorningWarmupExercises {
 //        return Integer.toBinaryString(sum);
 //    }
 
-    public static void writeLines(){
+//    public static void writeLines(){
+//
+//        String[] data = {"I like to eat apples.","Hey, how are you?","Whats going on?", "Whats up doc?","I go to codeup at 9 am on weekdays."};
+//
+//
+//        for(String s : data){
+//            System.out.println(s);
+//        }
+//    }
+    public static double divide(int divisor, int div) throws ArithmeticException{
+        double quotient = 0.0;
 
-        String[] data = {"I like to eat apples.","Hey, how are you?","Whats going on?", "Whats up doc?","I go to codeup at 9 am on weekdays."};
-
-
-        for(String s : data){
-            System.out.println(s);
+        if(div == 0){
+            throw new ArithmeticException("Error: Attempt to divide by zero.");
         }
+        quotient = (double) divisor/div;
+        return quotient;
     }
 }
