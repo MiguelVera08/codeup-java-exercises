@@ -1,5 +1,5 @@
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 
@@ -35,7 +35,11 @@ public class MorningWarmupExercises {
 
 //        writeLines();
 
-        System.out.println(divide(5,3));
+//        System.out.println(divide(5,3));
+
+        int[] nums = {1,2,3,4,5};
+
+        System.out.println(Arrays.toString(products(nums)));
     }
 
 //    public static long cube(int num){
@@ -70,13 +74,32 @@ public class MorningWarmupExercises {
 //            System.out.println(s);
 //        }
 //    }
-    public static double divide(int divisor, int div) throws ArithmeticException{
-        double quotient = 0.0;
+//    public static double divide(int divisor, int div) throws ArithmeticException{
+//        double quotient = 0.0;
+//
+//        if(div == 0){
+//            throw new ArithmeticException("Error: Attempt to divide by zero.");
+//        }
+//        quotient = (double) divisor/div;
+//        return quotient;
+//    }
 
-        if(div == 0){
-            throw new ArithmeticException("Error: Attempt to divide by zero.");
+    public static int[] products(int[] nums){
+
+        int[] result = new int[nums.length];
+
+        result[nums.length-1]=1;
+        for(int i=nums.length-2; i>=0; i--){
+            result[i]=result[i+1]*nums[i+1];
         }
-        quotient = (double) divisor/div;
-        return quotient;
+
+        int left=1;
+        for(int i=0; i<nums.length; i++){
+            result[i]=result[i]*left;
+            left = left*nums[i];
+        }
+
+        return result;
+
     }
 }
