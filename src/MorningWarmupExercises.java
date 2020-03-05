@@ -1,4 +1,5 @@
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -37,9 +38,10 @@ public class MorningWarmupExercises {
 
 //        System.out.println(divide(5,3));
 
-        int[] nums = {1,2,3,4,5};
-
-        System.out.println(Arrays.toString(products(nums)));
+//        int[] nums = {1,2,3,4,5};
+//
+//        System.out.println(Arrays.toString(products(nums)));
+        System.out.println(exercise061(60));
     }
 
 //    public static long cube(int num){
@@ -84,22 +86,31 @@ public class MorningWarmupExercises {
 //        return quotient;
 //    }
 
-    public static int[] products(int[] nums){
-
-        int[] result = new int[nums.length];
-
-        result[nums.length-1]=1;
-        for(int i=nums.length-2; i>=0; i--){
-            result[i]=result[i+1]*nums[i+1];
+//    public static int[] products(int[] nums){
+//
+//        int[] result = new int[nums.length];
+//
+//        result[nums.length-1]=1;
+//        for(int i=nums.length-2; i>=0; i--){
+//            result[i]=result[i+1]*nums[i+1];
+//        }
+//
+//        int left=1;
+//        for(int i=0; i<nums.length; i++){
+//            result[i]=result[i]*left;
+//            left = left*nums[i];
+//        }
+//
+//        return result;
+//
+//    }
+    public static ArrayList<Integer> exercise061(int num){
+        ArrayList<Integer> nums = new ArrayList<>();
+        for(int i = 1; i <= num; i++){
+            if(num % i == 0){
+                nums.add(i);
+            }
         }
-
-        int left=1;
-        for(int i=0; i<nums.length; i++){
-            result[i]=result[i]*left;
-            left = left*nums[i];
-        }
-
-        return result;
-
+        return nums;
     }
 }
