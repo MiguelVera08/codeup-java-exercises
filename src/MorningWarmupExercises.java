@@ -1,6 +1,7 @@
 
-import java.util.ArrayList;
+import java.awt.*;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 
@@ -41,8 +42,17 @@ public class MorningWarmupExercises {
 //        int[] nums = {1,2,3,4,5};
 //
 //        System.out.println(Arrays.toString(products(nums)));
-        System.out.println(exercise061(60));
+//        System.out.println(exercise061(60));
+//        String[] fruits = {"strawberry","pear","apple","pineapple"};
+//        System.out.println(type(fruits));
+//        System.out.println(theSize("nobody has a friend"));
+//        System.out.println(average(nums));
+//        System.out.println(power(5));
     }
+
+//    private static int power(int i) {
+//        return (int) Math.pow(i,2);
+//    }
 
 //    public static long cube(int num){
 //
@@ -104,13 +114,37 @@ public class MorningWarmupExercises {
 //        return result;
 //
 //    }
-    public static ArrayList<Integer> exercise061(int num){
-        ArrayList<Integer> nums = new ArrayList<>();
-        for(int i = 1; i <= num; i++){
-            if(num % i == 0){
-                nums.add(i);
-            }
-        }
-        return nums;
-    }
+//    public static ArrayList<Integer> exercise061(int num){
+//        ArrayList<Integer> nums = new ArrayList<>();
+//        for(int i = 1; i <= num; i++){
+//            if(num % i == 0){
+//                nums.add(i);
+//            }
+//        }
+//        return nums;
+//    }
+//    public static boolean type(String[] fruits){
+//
+//        List<String> list = Arrays.asList(fruits);
+//
+//        return list.contains("pear");
+//    }
+//
+//    public static int theSize(String n){
+//
+//        return n.length();
+//
+//    }
+//    public static double average(int[] nums){
+//        int total = 0;
+//
+//        for (int i = 0; i < nums.length; i++){
+//
+//            total += nums[i];
+//        }
+//        double avr = (double)total/nums.length;
+//        return avr;
+//    }
+
+
 }
